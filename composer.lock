@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb80b9bf17780ffdc5ce6ff51f285128",
+    "content-hash": "ced634d3ff884d7a144d711f07fe46f9",
     "packages": [
         {
             "name": "brick/math",
@@ -2662,6 +2662,38 @@
                 }
             ],
             "time": "2024-01-28T23:22:08+00:00"
+        },
+        {
+            "name": "modules/news",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/news",
+                "reference": "675d8a71321bfb6a19900f10bb220def18934d53"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\News\\Providers\\NewsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\News\\": "src/",
+                    "Modules\\News\\Tests\\": "tests/",
+                    "Modules\\News\\Database\\Factories\\": "database/factories/",
+                    "Modules\\News\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "monolog/monolog",
