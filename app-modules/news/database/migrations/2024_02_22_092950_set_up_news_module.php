@@ -2,20 +2,22 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class SetUpNewsModule extends Migration
-{
-	public function up()
-	{
-		// Schema::create('news', function(Blueprint $table) {
-		// 	$table->bigIncrements('id');
-		// 	$table->timestamps();
-		// 	$table->softDeletes();
-		// });
-	}
-	
-	public function down()
-	{
-		// Schema::dropIfExists('news');
-	}
-}
+return new class extends Migration {
+    public function up(): void
+    {
+        Schema::create('news', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title');
+            $table->text('content');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('news');
+    }
+};
