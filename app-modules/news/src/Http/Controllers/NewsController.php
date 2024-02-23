@@ -14,8 +14,10 @@ class NewsController extends Controller
         return view('news::index', compact('news'));
     }
 
-    public function show()
+    public function show(string $news): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        // TODO: Implement show() method.
+        // FIXME: Route binding is not working
+        $news = News::query()->findOrFail($news);
+        return view('news::show', compact('news'));
     }
 }
