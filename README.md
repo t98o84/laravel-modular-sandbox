@@ -19,7 +19,16 @@
    ```bash
     docker compose exec laravel.test composer install
    ```
-6. Access the application (http://localhost)
+6. Install npm dependencies
+   ```bash
+   docker compose exec laravel.test npm install
+   ```
+7. Build assets
+   ```bash
+    docker compose exec laravel.test npm run build
+   ```
+8. Access the application (http://localhost)
+
 
 ## Make a new module
 See: https://github.com/InterNACHI/modular
