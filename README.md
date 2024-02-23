@@ -28,7 +28,12 @@
     docker compose exec laravel.test npm run build
    ```
 8. Access the application (http://localhost)
-
+9. Generate ide helper
+   ```bash
+   docker compose exec laravel.test php artisan ide-helper:generate
+   docker compose exec laravel.test php artisan ide-helper:meta
+   docker compose exec laravel.test php artisan ide-helper:models -W
+   ```
 
 ## Make a new module
 See: https://github.com/InterNACHI/modular
