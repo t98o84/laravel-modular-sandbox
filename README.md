@@ -45,3 +45,8 @@ docker compose exec laravel.test php artisan make:module <module-name>
 
 docker compose exec laravel.test composer update modules/<module-name>
 ```
+
+## Run tests
+```bash
+docker compose exec laravel.test ./vendor/bin/pest
+```
