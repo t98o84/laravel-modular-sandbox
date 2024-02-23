@@ -1,0 +1,24 @@
+{
+	"name": "modules/use-external",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\UseExternal\\": "src/",
+			"Modules\\UseExternal\\Tests\\": "tests/",
+			"Modules\\UseExternal\\Database\\Factories\\": "database/factories/",
+			"Modules\\UseExternal\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\UseExternal\\Providers\\UseExternalServiceProvider"
+			]
+		}
+	}
+}
